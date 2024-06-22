@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="animal.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Biography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav input[type="text"] {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        nav input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        nav input[type="submit"]:hover {
+            background-color: #555;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #E91E63;
+        }
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            animation: slideFromLeft 1s ease-out;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            
+        }
+        img {
+          width: 100%;
+          height: auto;
+}
+        @keyframes slideFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Animals Biography</h1>
+    </header>
+    <nav>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="submit" value="Search" onclick="searchAnimals()">
+        <a href="#Mammals">Mammals</a>
+        <a href="#Reptiles">Reptiles</a>
+        <a href="#amphibians">Amphibians</a>
+
+        <!-- Your existing navigation links -->
+
+    </nav>
+    <!-- Your existing sections -->
+
+    <script>
+        function searchAnimals() {
+            var input = document.getElementById('searchInput').value.toUpperCase();
+            var sections = document.querySelectorAll('section[id]');
+            sections.forEach(function(section) {
+                var h2 = section.querySelector('h2');
+                var txtValue = h2.textContent || h2.innerText;
+                if (txtValue.toUpperCase().includes(input)) {
+                    section.style.display = ''; // Show the section
+                } else {
+                    section.style.display = 'none'; // Hide the section
+                }
+            });
+        }
+    </script>
+
+       
+
+    <section>
+        <h1 style= "color: #6df0be;">Mammals</h1>
+        <p>Mammals include humans and all other animals that are warm-blooded vertebrates (vertebrates have backbones) with hair. They feed their young with milk and have a more well-developed brain than other types of animals.  </p>
+        
+        <!-- mammals strats from here -->
+
+    </section>
+    <section id="lion">
+        <h2 style="color: #FF9800;">Lion</h2>
+        <p>The lion (Panthera leo) is a species in the family Felidae and a member of the genus Panthera. It is known for its majestic appearance and is often referred to as the 'king of the jungle'. Lions primarily inhabit savanna and grassland, although they may take to bush and forest. Lions are apex and keystone predators, although they scavenge as opportunity allows. They typically hunt in coordinated groups and prey primarily on ungulates such as deer and buffalo.</p>
+        <img src="https://cdn.pixabay.com/photo/2018/04/19/09/50/animal-3332729_1280.jpg" alt="center">
+        
+    </section>
+    <section id="tiger">
+        <h2 style="color: #FF5722;">Tiger</h2>
+        <p>The tiger (Panthera tigris) is the largest extant cat species and a member of the genus Panthera. It is renowned for its strength, agility, and distinctive striped coat. Tigers are solitary animals, except during mating season and when a female is raising cubs. They are territorial and generally require large areas of habitat to support their prey requirements.</p>
+        <img src="https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_1280.jpg" alt="center">
+    </section>
+    <section id="leopard">
+        <h2 style="color: #E91E63;">Leopard</h2>
+       <p>The leopard (Panthera pardus) is one of the five extant species in the genus Panthera. It is known for its adaptability and is widely distributed across Africa and Asia. Leopards are opportunistic hunters and have a broad diet, including insects, rodents, and larger prey such as antelope and monkeys.</p>
+       <img src="https://cdn.pixabay.com/photo/2021/04/05/16/23/leopard-6153930_1280.jpg" alt="leopard">
+    </section>
+    <section id="hyena">
+        <h2 style="color: #9C27B0;">Hyena</h2>
+        <p>The hyena is a mammal native to Africa and Asia. It is known for its scavenging habits and distinctive vocalizations. Hyenas are highly social animals and live in large groups known as clans. They are proficient hunters and often compete with larger predators like lions and leopards for food.</p>
+        <img src="https://cdn.pixabay.com/photo/2019/02/02/19/52/hyena-3971284_1280.jpg" alt="hyena">
+    </section>
+    <section id="cheetah">
+        <h2 style="color: #FF9800;">Cheetah</h2>
+        <p>The cheetah (Acinonyx jubatus) is the fastest land animal and is known for its incredible speed and agility. It primarily inhabits grasslands and savannas in Africa, as well as a small portion of Iran. Cheetahs are solitary hunters and mainly prey on small to medium-sized ungulates.</p>
+        <img src="https://cdn.pixabay.com/photo/2017/10/17/05/31/cheetah-2859581_1280.jpg" alt="cheetah">
+    </section>
+    
+    <section id="elephant">
+        <h2 style="color: #FF5722;">Elephant</h2>
+        <p>The elephant is the largest land animal on Earth and is known for its long trunk, large ears, and tusks. There are two species of elephants: the African elephant and the Asian elephant. Elephants are highly intelligent and social animals, living in matriarchal herds led by the oldest female.</p>
+        <img src="https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_1280.jpg" alt="elephant">
+    </section>
+    
+    <section id="giraffe">
+        <h2 style="color: #E91E63;">Giraffe</h2>
+        <p>The giraffe is the tallest land animal and is known for its long neck and distinctive spotted coat. Giraffes inhabit savannas, grasslands, and open woodlands in Africa. They are herbivores and primarily feed on leaves from trees and shrubs. Giraffes are social animals and usually live in loose herds.</p>
+        <img src="https://cdn.pixabay.com/photo/2020/12/03/08/05/giraffe-5799824_1280.jpg" alt="giraffe">
+    </section>
+    <section id="black-bear">
+        <h2 style="color: #FF9800;">Black Bear</h2>
+        <p>The black bear is a medium-sized bear native to North America. It is the most common bear species in North America and is known for its black fur. Black bears are omnivores, feeding on a variety of plant and animal matter, including berries, nuts, insects, and occasionally small mammals.</p>
+        <img src="https://cdn.pixabay.com/photo/2020/02/11/09/22/bear-4838870_1280.jpg" alt="black bear">
+    </section>
+    
+    <section id="chimpanzee">
+        <h2 style="color: #FF5722;">Chimpanzee</h2>
+        <p>The chimpanzee is a species of great ape native to the forests of Central and West Africa. Chimpanzees are highly intelligent and share approximately 98% of their DNA with humans. They live in complex social groups and are known for their tool-making abilities and use of various communication methods.</p>
+        <img src="https://cdn.pixabay.com/photo/2015/08/21/11/43/chimpanzee-898756_1280.jpg" alt="chimpanzee">
+    </section>
+    
+    <section id="giant-panda">
+        <h2 style="color: #E91E63;">Giant Panda</h2>
+        <p>The giant panda is a bear species native to China. It is characterized by its distinctive black and white coat and large, round face. Giant pandas primarily feed on bamboo, although they are omnivores and may eat other foods such as fruits and small mammals. They are an endangered species, primarily due to habitat loss and fragmentation.</p>
+        <img src="https://cdn.pixabay.com/photo/2021/10/09/08/58/panda-6693513_1280.jpg" alt="giant panda">
+    </section>
+    
+    <section id="chipmunk">
+        <h2 style="color: #9C27B0;">Chipmunk</h2>
+        <p>The chipmunk is a small, striped rodent belonging to the squirrel family. Chipmunks are native to North America and Asia and are known for their cheek pouches, which they use to carry food. They primarily feed on nuts, seeds, fruits, and insects. Chipmunks are active during the day and hibernate during the winter months.</p>
+        <img src="https://cdn.pixabay.com/photo/2022/09/04/17/00/chipmunk-7432182_1280.jpg" alt="chipmunk">
+    </section>
+
+    <section id="arctic-fox">
+        <h2 style="color: #FF9800;">Arctic Fox</h2>
+        <p>The Arctic fox (Vulpes lagopus) is a small fox native to the Arctic regions of the Northern Hemisphere. It is well-adapted to cold climates and has a thick fur coat that changes color with the seasons. Arctic foxes are omnivores and feed on small mammals, birds, eggs, and berries.</p>
+        <img src="https://cdn.pixabay.com/photo/2022/09/19/02/14/arctic-fox-7464356_1280.jpg" alt="Arctic Fox">
+    </section>
+    
+    <section id="american-bison">
+        <h2 style="color: #FF5722;">American Bison</h2>
+        <p>The American bison (Bison bison), also commonly known as the buffalo, is a large mammal native to North America. Bison are herbivores and graze on grasses and sedges. They once roamed the Great Plains in enormous herds but were nearly hunted to extinction in the 19th century.</p>
+        <img src="https://cdn.pixabay.com/photo/2012/10/10/10/41/bison-60592_1280.jpg" alt="American Bison">
+    </section>
+    
+    <section id="aye-aye">
+        <h2 style="color: #E91E63;">Aye-aye</h2>
+        <p>The aye-aye (Daubentonia madagascariensis) is a lemur native to Madagascar. It is known for its unusual appearance, with large eyes, a bushy tail, and elongated fingers used for tapping on trees to find grubs. Aye-ayes are nocturnal and primarily feed on insects and fruits.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Wild_aye_aye.jpg" alt="Aye-aye">
+    </section>
+    
+    <section id="black-rhino">
+        <h2 style="color: #9C27B0;">Black Rhino</h2>
+        <p>The black rhinoceros (Diceros bicornis) is a species of rhinoceros native to eastern and southern Africa. It is characterized by its hooked upper lip and is smaller than the white rhinoceros. Black rhinos are herbivores and primarily browse on leaves, branches, and shoots.</p>
+        <img src="https://discovery.sndimg.com/content/dam/images/discovery/fullset/2021/9/20/GettyImages-1046943480.jpg.rend.hgtvcom.1280.960.suffix/1632175261677.jpeg" alt="Black Rhino">
+    </section>
+
+</section>
+<section id="caracal">
+    <h2 style="color: #FF9800;">Caracal</h2>
+    <p>The caracal (Caracal caracal) is a medium-sized wild cat native to Africa, the Middle East, Central Asia, and India. Known for its distinctive tufted ears and agility, caracals are efficient hunters and primarily prey on small mammals and birds. They are solitary and territorial animals.</p>
+    <img src="https://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_caracal.jpg" alt="Caracal">
+</section>
+<section id="caribou">
+    <h2 style="color: #FF5722;">Caribou</h2>
+    <p>The caribou (Rangifer tarandus) is a species of deer native to Arctic, sub-Arctic, tundra, boreal forest, and mountainous regions of North America, Europe, and Asia. Caribou are known for their migration patterns and adaptation to cold environments, with both males and females growing antlers.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Caribou.jpg/1200px-Caribou.jpg" alt="Caribou">
+</section>
+<section id="coati">
+    <h2 style="color: #E91E63;">Coati</h2>
+    <p>The coati, or coatimundi, is a member of the raccoon family native to South America, Central America, Mexico, and the southwestern United States. Coatis are omnivores with a diet that includes fruits, insects, small mammals, and eggs. They are highly social animals and live in groups called bands.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/A_White-nosed_Coati.jpg/640px-A_White-nosed_Coati.jpg" alt="Coati">
+</section>
+<section id="coyote">
+    <h2 style="color: #9C27B0;">Coyote</h2>
+    <p>The coyote (Canis latrans) is a canid native to North and Central America. Coyotes are adaptable animals with a diverse diet that includes small mammals, birds, fruits, and insects. They are known for their vocalizations and are often found in various habitats, including forests, grasslands, and urban areas.</p>
+    <img src="https://cdn.britannica.com/32/75632-050-7847C491/variant-coyote.jpg" alt="Coyote">
+</section>
+<section id="aardvark">
+    <h2 style="color: #FF9800;">Aardvark</h2>
+    <p>The aardvark (Orycteropus afer) is a medium-sized, burrowing mammal native to Africa. It is known for its long, tubular snout used for feeding on ants and termites. Aardvarks are nocturnal and spend most of their time digging burrows or foraging for food. They are solitary animals and are rarely seen during the day.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Orycteropus_afer_175359469.jpg/800px-Orycteropus_afer_175359469.jpg" alt="Aardvark">
+</section>
+<section id="binturong">
+    <h2 style="color: #FF5722;">Binturong</h2>
+    <p>The binturong (Arctictis binturong), also known as the bearcat, is a viverrid native to South and Southeast Asia. Binturongs are known for their prehensile tail and produce a musk that smells like popcorn, which helps in marking territory. They are arboreal and primarily feed on fruits, eggs, small mammals, and birds.</p>
+    <img src="https://media.istockphoto.com/id/903683294/photo/binturong-or-philipino-bearcat-looking-curiously-from-the-tree-palawan-philippines.jpg?s=612x612&w=0&k=20&c=VBDSUlHs_-VFrQ2_daN4KX37TBgCgbfd5-Jz6yx0vI8=" alt="Binturong">
+</section>
+
+<section> 
+    <h1 style="color: #4CAF50;">Reptiles</h1>
+    <p>Reptiles are cold-blooded vertebrates. (Vertebrates have backbones.) They have dry skin covered with scales or bony plates and usually lay soft-shelled eggs.</p>
+</section>
+<!-- repliles start from here  -->
+
+<section id="kingCobra">
+    <h2 style="color: darkgrey;"> King Cobra</h2>
+    <p>The king cobra is a venomous snake endemic to Asia. The sole member of the genus Ophiophagus, it is not taxonomically a true cobra, despite its common name and some resemblance. With an average length of 3.18 to 4 m and a record length of 5.85 m, it is the world's longest venomous snake.</p>
+    <img src="https://www.thoughtco.com/thmb/jYKogvorvYkU4MzjQOFMOowtsv8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1081539198-da2463161bca4538a0dd0028dbaedebc.jpg" alt="American King Cobra">
+</section>
+
+<section id="anaconda">
+    <h2 style="color: rgb(40, 209, 138);"> Anaconda</h2>
+    <p>The Anaconda is a large snake found in South America. It is a non-venomous constrictor known for its aquatic lifestyle and can grow to be one of the heaviest snakes in the world.</p>
+    <img src="https://cdn.britannica.com/53/5553-050-44912CBD/Green-anaconda.jpg" alt="Anaconda">
+</section>
+
+<section id="python">
+    <h2 style="color: rgb(114, 211, 58);"> Python</h2>
+    <p>The Python is a family of non-venomous constricting snakes found in Africa, Asia, and Australia. They are known for their powerful coils and are popular in the exotic pet trade.</p>
+    <img src="https://cdn.thenewstack.io/media/2024/02/49cf830e-david-clode-vec5yfuvcgs-unsplash.jpg" alt="Python">
+</section>
+
+<section id="boaConstrictor">
+    <h2 style="color: rgb(40, 112, 49);"> Boa Constrictor</h2>
+    <p>The Boa Constrictor is a large constricting snake found in the Americas. It squeezes its prey to death before consuming it whole, often inhabiting a variety of environments.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Boa_constrictor%2C_Va%C5%88kovka%2C_Brno_%282%29.jpg/1280px-Boa_constrictor%2C_Va%C5%88kovka%2C_Brno_%282%29.jpg" alt="Boa Constrictor">
+</section>
+
+<section id="rattlesnake">
+    <h2 style="color: rgb(82, 173, 102);"> Rattlesnake</h2>
+    <p>The Rattlesnake is a venomous snake characterized by the rattle at the end of its tail. It is native to the Americas and plays a crucial role in its ecosystem as both predator and prey.</p>
+    <img src="https://i.natgeofe.com/k/7f52bf68-4538-4195-894c-342bd89b187d/rattlesnake-tongue.jpg" alt="Rattlesnake">
+</section>
+
+<section id="chameleon">
+    <h2 style="color: rgb(109, 78, 138);"> Chameleon</h2>
+    <p>The Chameleon is a lizard known for its ability to change color. It inhabits various habitats, mainly in Africa and Madagascar, and uses its unique camouflage for protection and hunting.</p>
+    <img src="https://edunovations.com/notes/wp-content/uploads/2023/04/Chameleon-facts-2.jpg" alt="Chameleon">
+</section>
+
+<section id="gecko">
+    <h2 style="color: rgb(95, 137, 185);"> Gecko</h2>
+    <p>The Gecko is a small lizard found in warm climates around the world. Known for its sticky toe pads, it can climb smooth surfaces and is a popular choice as a pet due to its interesting behavior.</p>
+    <img src="https://i.natgeofe.com/k/5e7c366f-e20f-41fe-8120-ae95af36d3f6/gecko-tree-closeup-colorful_16x9.jpg" alt="Gecko">
+</section>
+<section id="desertTortoise">
+    <h2>Desert Tortoise</h2>
+    <p>The Desert Tortoise is a species of tortoise native to the Mojave and Sonoran Deserts of the southwestern United States and northern Mexico. It is well adapted to desert conditions and can live for over 50 years.</p>
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTiUKQh9NP0IA-VqaJAL2TBCluiRrqG7c8SHRxnFCWm_7xm0oyE" alt="Desert Tortoise">
+</section>
+
+<section id="galapagosTortoise">
+    <h2>Galapagos Tortoise</h2>
+    <p>The Galapagos Tortoise is a giant tortoise native to the Galapagos Islands. It is one of the largest tortoise species in the world and has a long lifespan, with some individuals living over 100 years.</p>
+    <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Galapagos-Islands-Giant-tortoise.jpg" alt="Galapagos Tortoise">
+</section>
+<section id="greenSeaTurtle">
+    <h2>Green Sea Turtle</h2>
+    <p>The Green Sea Turtle is a large sea turtle found throughout tropical and subtropical seas around the world. It is named for the green color of its fat, not its shell, and is primarily herbivorous, feeding on sea grasses and algae.</p>
+    <img src="https://i.pinimg.com/originals/d5/82/7f/d5827fc9dd93ecba7d2b6f950d403cc0.jpg" alt="Green Sea Turtle">
+</section>
+
+<section id="leatherbackSeaTurtle">
+    <h2>Leatherback Sea Turtle</h2>
+    <p>The Leatherback Sea Turtle is the largest turtle and heaviest reptile in the world. It is named for its unique shell, which is composed of a layer of thin, tough, rubbery skin. Leatherbacks are primarily found in tropical oceans and feed primarily on jellyfish.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Leatherback_sea_turtle_Tinglar%2C_USVI_%285839996547%29.jpg" alt="Leatherback Sea Turtle">
+</section>
+
+<section id="loggerheadSeaTurtle">
+    <h2>Loggerhead Sea Turtle</h2>
+    <p>The Loggerhead Sea Turtle is a large sea turtle found in oceans worldwide. It is named for its relatively large head and is known for its powerful jaws, which allow it to crush hard-shelled prey such as crabs and mollusks.</p>
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTofs_1pUVsAMIRLbMdthF0zne54r7psqk7PZcGELd98I4T8k-9" alt="Loggerhead Sea Turtle">
+</section>
+
+<!-- Amphibians starts from here -->
+
+<section> 
+    <h1 style="color: #7ac9a8;">Amphibians</h1>
+    <p>Amphibians are cold-blooded vertebrates (vertebrates have backbones) that don’t have scales. They live part of their lives in water and part on land..</p>
+</section>
+
+<section id="americabullfrog">
+    <h2>American Bullfrog</h2>
+    <p>The American Bullfrog is a large frog native to North America. It is known for its loud croaking call and is a voracious eater, consuming insects, small mammals, and even other frogs.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/North-American-bullfrog1.jpg" alt="American Bullfrog">
+</section>
+
+<section id="canetoad">
+    <h2>Cane Toad</h2>
+    <p>The Cane Toad is a large, heavily built amphibian native to South and Central America. It is infamous for its toxic skin secretions, which can be harmful to predators. Cane toads are considered invasive species in many parts of the world.</p>
+    <img src="https://media.australian.museum/media/dd/images/Some_image.width-800.97c8f7f.jpg" alt="Cane Toad">
+</section>
+
+<section id="mexicanaxolotl">
+    <h2>Mexican Axolotl</h2>
+    <p>The Mexican Axolotl is a unique amphibian found exclusively in Mexico. It is famous for its ability to regenerate lost body parts, including limbs and even parts of its brain. Axolotls are critically endangered in the wild.</p>
+    <img src="https://cdn.mos.cms.futurecdn.net/m5jVtAvJVZNQDy2ywRE7rV-1200-80.jpg" alt="Mexican Axolotl">
+</section>
+
+<section id="poisondartfrog">
+    <h2>Poison Dart Frog</h2>
+    <p>The Poison Dart Frog is a small, brightly colored frog native to Central and South America. It is known for its potent skin toxins, which are used by indigenous tribes to poison the tips of blow darts. Some species of poison dart frogs are among the most toxic animals on Earth.</p>
+    <img src="https://tnaqua.org/app/uploads/2023/03/20230117-Poison-Dart-Frog-04-scaled.jpg" alt="Poison Dart Frog">
+</section>
+
+<section id="redeyedtreefrog">
+    <h2>Red-Eyed Tree Frog</h2>
+    <p>The Red-Eyed Tree Frog is a small tree-dwelling frog found in Central and South America. It is known for its vibrant green body, red eyes, and orange feet. These frogs are nocturnal and use their bright colors as a warning to predators.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Red_eyed_tree_frog_edit2.jpg/1280px-Red_eyed_tree_frog_edit2.jpg" alt="Red-Eyed Tree Frog">
+</section>
+
+<section id="reticulatedglassfrog">
+    <h2>Reticulated Glass Frog</h2>
+    <p>The Reticulated Glass Frog is a small, semi-transparent frog native to Central and South America. It gets its name from the net-like pattern on its belly. These frogs are known for their unique appearance and habitat preferences, often found near streams or rivers in forested areas.</p>
+    <img src="https://i.natgeofe.com/k/33d55021-b6fe-45ab-a5ce-135a70e70eea/reticulated-glass-frog-underside.jpg" alt="Reticulated Glass Frog">
+</section>
+
+
+    
+    
+    
+    <!-- Add more sections for other animals -->
+    
+          
+</body>
+</html>
